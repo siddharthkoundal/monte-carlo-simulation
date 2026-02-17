@@ -39,7 +39,8 @@ class TwinProfile(BaseModel):
 
 class ScenarioResult(BaseModel):
     name: str
-    survival: int # Changed from survival_rate to survival (int)
+    probability: float
+    survival_rate: int
 
 class SimulationResponse(BaseModel):
     application_id: str

@@ -61,7 +61,8 @@ async def analyze_application(request: ApplicationRequest):
         "scenarios": [
             {
                 "name": s["name"],
-                "survival": int(s["survival_rate"]),  # Ensure it's an integer
+                "probability": s["probability"],
+                "survival_rate": int(s["survival_rate"]),  # Ensure it's an integer
             }
             for s in scenario_results
         ],
